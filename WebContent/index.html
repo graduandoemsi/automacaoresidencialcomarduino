@@ -1,0 +1,52 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<!-- define angular app -->
+<html ng-app="PrincipalApp">
+	<head lang="br">
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Automação Residencial com Arduino</title>
+		
+		<!-- SCROLLS -->
+		<!-- load bootstrap and fontawesome via CDN -->
+		
+		<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" />
+		
+		<link rel="stylesheet" href="styles/style.css"/> 
+		     
+		<script src="js/libs/angular.js"></script>
+		<script src="js/libs/angular-route.js"></script>
+		<script src="js/libs/jquery-3.3.1.js"></script>
+		
+
+		<!-- <script src="js/services.js"></script> -->
+		
+		<script src="js/Controllers/principalController.js"></script>
+		<script src="js/Controllers/sobreController.js"></script>
+		<script src="js/Controllers/contatoController.js"></script>
+		<script src="js/Controllers/loginController.js"></script>
+		<script src="js/Controllers/cadastroController.js"></script>
+		<script src="js/Controllers/salaController.js"></script>
+		<script src="js/Routers/routers.js"></script>
+		<script src="js/Services/urlBase.js"></script>
+		<script src="js/Services/services.js"></script>
+		
+		<!--  <base href="/">-->
+	</head>
+	<body ng-controller="homeController">
+	
+		 <!-- HEADER AND NAVBAR -->
+		 <div ng-include='"html/header.html"'></div>
+		 <!-- MAIN CONTENT AND INJECTED VIEWS -->
+		 <div id="main">
+		            
+		    <!-- angular templating -->
+		    <!-- this is where content will be injected -->
+		    <div ng-view class="corpo"></div>
+		 </div>
+		 <div ng-include='"html/footer.html"'></div>
+	
+	</body>
+</html>

@@ -1,0 +1,41 @@
+
+		<div class="cadastro">
+		
+			<form id="formCadastroUsuario"  data-toggle="validator" role="form">
+				<div><h1>{{title}}</h1></div>
+				<div class="form-group">
+					<label for="textNome" class="control-label">Nome</label> 
+					<input id="textNome" ng-model="pessoa.nome" class="form-control" placeholder="Digite seu Nome..." type="text" required>
+				</div>
+				<div class="form-group">
+					<label for="textCPF" class="control-label">CPF</label>
+					<input id="textCPF" ng-model="pessoa.cpf" class="form-control" placeholder="Digite seu CPF..." type="text" required>
+				</div>
+				<div class="form-group">
+					<label for="textRG" class="control-label">RG</label> 
+					<input id="textRG" ng-model="pessoa.rg" class="form-control" placeholder="Digite seu RG..." type="text" required>
+				</div>
+				<div class="form-group">
+					<label name="texEmail" class="control-label">Email</label>
+					<input id="textEmail" ng-model="pessoa.email" class="form-control" placeholder="Digite seu E-mail" type="email" required>
+					    <div ng-show="form.$submitted || form.uEmail.$touched">
+							<span ng-show="form.uEmail.$error.required">Email é necessário</span>
+							<span ng-show="form.uEmail.$error.email">Este não é um email válido.</span>
+					    </div>	
+				</div>
+				<div class="form-group">
+					<label for="texTelefone" class="control-label">Telefone</label>
+					<input id="textTelefone" ng-model="pessoa.telefone" class="form-control" placeholder="Digite seu Telefone..." type="text">
+				</div>
+				<div class="form-group">
+					<label for="texCelular" class="control-label">Celular</label>
+					<input id="textCelular" ng-model="pessoa.celular" class="form-control" placeholder="Digite seu Celular..." type="text" required>
+				</div>
+				<button type="submit" ng-click="salvar(pessoa)" ng-disabled="form.$invalid" class="btn btn-primary">Salvar</button>
+				
+				{{mensagem}}
+			</form>
+		</div>
+
+
+

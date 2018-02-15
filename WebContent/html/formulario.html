@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html app="appForm">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<form ng-controller="formControl">
+		<div class="form-group">
+			<label for="textNome" class="control-label">Nome</label> <input
+				id="textNome" ng-model="user.nome" class="form-control"
+				placeholder="Digite seu Nome..." type="text" required>
+		</div>
+		<button type="submit" ng-click="salvar()" class="btn btn-primary">Salvar</button>
+	</form>
+</body>
+</html>
