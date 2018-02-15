@@ -9,7 +9,7 @@ import org.glassfish.jersey.server.ResourceConfig;
 public class ConfiguracaoDeRecursos extends ResourceConfig{
 
     public ConfiguracaoDeRecursos() {
-        packages("br.com.automacao");
+        packages("br.com.olrs");
     }
 	
 }

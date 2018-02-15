@@ -31,13 +31,7 @@
         <!-- Drop and re-create the database schema on startup -->
         <property name="hbm2ddl.auto">validate</property>
         
-        <!-- 
-
-        
-
-
-        
-         -->
+        <!--    -->
         <mapping class = "br.com.olrs.automacaoresidencial.model.Pessoa"/>
         <mapping class = "br.com.olrs.automacaoresidencial.model.Cliente" />
         <mapping class = "br.com.olrs.automacaoresidencial.model.Funcionario" />
